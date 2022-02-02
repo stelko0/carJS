@@ -6,7 +6,7 @@
     "price": 3300
   },
   "115151136111-98112": {
-    "name": "Toyota Avensis 1.6i",
+    "name": "Toyota Avensis 2.6",
     "description": "Imported from Denmark. 203 000 km with full service history. No blemishes on the paint, well maintained interior, technically sound. Possible lease thourgh leasing company or bank or barter for another car.",
     "imageUrl": "11642784212322196_2Z.jpg",
     "price": 11900
@@ -17,10 +17,16 @@
     "imageUrl": "11642697845129757_i2.jpg",
     "price": 2699
   },
-  "133991512-51595": {
-    "name": "Audi 80 B4 Avant",
-    "description": "1.9tdi ",
-    "imageUrl": "asdasd",
-    "price": 555
+  "590621405-11111113": {
+    "name": "Subarubaru",
+    "description": "",
+    "imageUrl": "271709816_1545481919167006_6306746069122452176_n.png",
+    "price": 420000
+  },
+  "137128141126-99102": {
+    "name": "Peugeot 107 1.0",
+    "description": "Performed inspection of the technical condition. Reserved interior and exterior. Engine, gearbox and chassis in perfect condition. There are 2 keys, air conditioning, electrical package. Service documents are included. The kilometers are real.",
+    "imageUrl": "271887191_642820730390402_5798173422662894145_n.png",
+    "price": 3790
   }
 }
