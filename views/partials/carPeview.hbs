@@ -1,8 +1,15 @@
 <div class='cube'>
+  {{#if imageUrl}}
   <img
     class='cube'
     src='/static/assets/{{imageUrl}}'
   />
+  {{else }}
+  <img
+    class='cube'
+    src='/static/assets/noImage.jpg'
+  />
+  {{/if}}
   <p class='name'>{{name}}</p>
   <p><span>Price: </span>{{price}}</p>
   <a class='btn' href='/details/{{id}}'>Details</a>

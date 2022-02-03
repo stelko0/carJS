@@ -1,7 +1,7 @@
-const { Schema, model, modelNames } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const carSchema = new Schema({
-  name: { type: String, required: true, minlength: 3 },
+  name: { type: String, minlength: 3 },
   description: { type: String, default: '' },
   imageUrl: { type: String, default: 'noImage.jpg' },
   price: { type: Number, required: true, min: 0 },

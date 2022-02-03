@@ -5,7 +5,7 @@ function carViewModel(car) {
     id: car._id,
     name: car.name,
     description: car.description,
-    imageUrl: car.imageUrl,
+    imageUrl: car.imageUrl || undefined,
     price: car.price,
   };
 }
