@@ -21,13 +21,15 @@
 // - [x] improved home (search)
 // - [x] edit
 // - [x] delete
+// - [ ] create accessory
 // - [ ] attach accessory to car
 // - [ ] update details to include accessory
 // [x] add front-end code
-// [ ] add database  connection
-// [ ] create Car model
-// [ ] upgrade car service to use Car model
-// [ ] Create Accessory model
+// [x] add database  connection
+// [x] create Car model
+// [x] upgrade car service to use Car model
+// [ ] add validation rules to Car model
+// [ ] create Accessory model
 
 const express = require('express');
 const hbs = require('express-handlebars');

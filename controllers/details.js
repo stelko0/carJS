@@ -6,7 +6,7 @@ module.exports = {
     if (car) {
       res.render('details', { title: `Carbicle - ${car.name}`, car });
     } else {
-      res.redirect('/404');
+      res.redirect('404');
     }
   },
 };
