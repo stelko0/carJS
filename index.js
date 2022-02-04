@@ -41,8 +41,9 @@ const accessoryService = require('./services/accessory');
 
 const { home } = require('./controllers/home');
 const { about } = require('./controllers/about');
-const create = require('./controllers/create');
 const { details } = require('./controllers/details');
+
+const create = require('./controllers/create');
 const edit = require('./controllers/edit');
 const deleteCar = require('./controllers/delete');
 const accessory = require('./controllers/accessory');
