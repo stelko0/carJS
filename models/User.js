@@ -6,9 +6,9 @@ const userSchema = new Schema({
   hashedPassword: { type: String, required: true },
 });
 
-userSchema.methods.comparePassword = async function () {
+userSchema.methods.comparePassword = async function (password) {
   // User bcrypt to hash and compare incoming password with stores hashed pasword
-  return await comparePassword(password, this.hashPassword);
+  return await comparePassword(password, this.hashedPassword);
 };
 
 userSchema.pre('save', async function (next) {

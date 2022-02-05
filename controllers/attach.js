@@ -8,9 +8,15 @@ module.exports = {
         req.accessory.getAll()
       ]);
 
-      const existingIds = car.accessories.map((a) => a.id.toString());
-      const availableAccessories = accessories.filter((a) => existingIds.includes(a.id.toString()) == false);
-      res.render('attach', {title: 'Attach Accessory',car, accessories: availableAccessories,});
+      if (car.owner != req.session.user.id) {
+        console.log(`User is not owner!`);
+        return res.redirect('/login');
+      }
+
+      const existingIds = car.accessories.map(a => a.id.toString());
+      const availableAccessories = accessories.filter(a => existingIds.includes(a.id.toString()) == false);
+
+      res.render('attach', {title: 'Attach Accessory', car, accessories: availableAccessories});
    } catch (err) {
      res.redirect('404');
    }
@@ -20,8 +26,12 @@ module.exports = {
     const accessoryId = req.body.accessory;
 
     try {
-      await req.storage.attachAccessory(carId, accessoryId);
-      res.redirect('/')
+      
+      if (await req.storage.attachAccessory(carId, accessoryId, req.session.user.id)) {
+        return res.redirect('/login')
+      } else {
+        return res.redirect('/')
+      }
     } catch (err) {
       console.log('Error creating accessory!');
       console.log(err.message);

@@ -178,6 +178,14 @@ input.difficulty {
 input.search {
     width: 50%;
 }
+.accessories{
+    display: flex;
+    flex-direction: row;
+}
+
+/* .accessory{
+    display: inline-block;
+} */
 
 input[type=submit] {
     background-color: #545775;

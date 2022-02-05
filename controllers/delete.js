@@ -11,8 +11,12 @@ module.exports = {
   async post(req, res) {
     const id = req.params.id;
     try {
-      await req.storage.deleteById(id);
-      res.redirect('/');
+      if (await req.storage.deleteById(id)){
+        res.redirect('/');
+      } else {
+        res.redirect('/login');
+
+      }
     } catch (err) {
       console.log('Attempted to delete non-existend Id', id);
       res.redirect('404');
